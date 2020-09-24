@@ -1,9 +1,9 @@
 {
   "name": "eslint-plugin-prettier-vue",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "ESLint plugin for Prettier formatting, which is better for Vue SFC",
   "homepage": "https://github.com/meteorlxy/eslint-plugin-prettier-vue",
-  "repository": "https://github.com/meteorlxy/eslint-plugin-prettier-vue.git",
+  "repository": "https://github.com/alexrafael10/eslint-plugin-prettier-vue",
   "author": "meteorlxy <meteor.lxy@foxmail.com>",
   "license": "MIT",
   "files": [

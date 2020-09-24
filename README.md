@@ -1,3 +1,5 @@
+[ This is a fork of the original package ]
+
 __Current branch is mainly for vue 2.0__
 
 __For better vue 3.0 support, check the [next](https://github.com/meteorlxy/eslint-plugin-prettier-vue/tree/next) branch__
