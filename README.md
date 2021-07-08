@@ -8,9 +8,9 @@ __For better vue 3.0 support, check the [next](https://github.com/meteorlxy/esli
 
 [![npm](https://img.shields.io/npm/v/eslint-plugin-prettier-vue)](https://www.npmjs.com/package/eslint-plugin-prettier-vue)
 [![prettier](https://img.shields.io/badge/code%20style-prettier-blue)](https://github.com/prettier/prettier)
-[![GitHub](https://img.shields.io/github/license/meteorlxy/eslint-plugin-prettier-vue)](https://github.com/meteorlxy/eslint-plugin-prettier-vue/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/meteorlxy/eslint-plugin-prettier-vue)](https://github.com/meteorlxy/eslint-plugin-prettier-vue/blob/main/LICENSE)
 
-> Make prettier works better on Vue SFCs
+> Make prettier works better on Vue SFC
 
 - Includes all functions of [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier).
 - Provides the ability for `prettier` to process [custom blocks](https://vue-loader.vuejs.org/guide/custom-blocks.html) of Vue SFCs.
@@ -37,7 +37,7 @@ npm install --save-dev \
 
 ### ESLint Config
 
-__DO NOT__ use `eslint-plugin-prettier` together. This plugin is based on `eslint-plugin-prettier` so you do not need it.
+**DO NOT** use `eslint-plugin-prettier` together. This plugin is based on `eslint-plugin-prettier` so you do not need it.
 
 ```js
 // .eslintrc.js
@@ -45,8 +45,7 @@ module.exports = {
   extends: [
     'plugin:vue/recommended',
     'plugin:prettier-vue/recommended',
-    // Do not add `'prettier/vue'` if you don't want to use prettier for `<template>` blocks
-    'prettier/vue',
+    'prettier',
   ],
 
   settings: {
@@ -56,14 +55,18 @@ module.exports = {
         /**
          * Use prettier to process `<template>` blocks or not
          *
-         * If set to `false`, remember not to `extends: ['prettier/vue']`, as you need the rules from `eslint-plugin-vue` to lint `<template>` blocks
+         * If set to `false`, you may need to enable those vue rules that are disabled by `eslint-config-prettier`,
+         * because you need them to lint `<template>` blocks
          *
          * @default true
          */
-        template: false,
+        template: true,
 
         /**
          * Use prettier to process `<script>` blocks or not
+         *
+         * If set to `false`, you may need to enable those rules that are disabled by `eslint-config-prettier`,
+         * because you need them to lint `<script>` blocks
          *
          * @default true
          */
@@ -123,9 +126,9 @@ module.exports = {
       },
     ],
   },
-}
+};
 ```
 
 ## LICENSE
 
-[MIT](https://github.com/meteorlxy/eslint-plugin-prettier-vue/blob/master/LICENSE) &copy; [@meteorlxy](https://github.com/meteorlxy) & [Contributors](https://github.com/meteorlxy/eslint-plugin-prettier-vue/graphs/contributors)
+[MIT](https://github.com/meteorlxy/eslint-plugin-prettier-vue/blob/main/LICENSE) &copy; [@meteorlxy](https://github.com/meteorlxy) & [Contributors](https://github.com/meteorlxy/eslint-plugin-prettier-vue/graphs/contributors)
